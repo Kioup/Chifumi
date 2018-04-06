@@ -4,7 +4,6 @@ import React from 'react';
 import { Text, View, Image, Button, Alert } from 'react-native';
 
 export default class Menu extends React.Component {
-  
   _localButtonPress = () => {
    this.props.navigation.navigate('Localscreen')
   };
