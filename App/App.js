@@ -2,7 +2,8 @@ import React from 'react';
 import { StackNavigator } from 'react-navigation';
 
 import Menu from "./components/Menu";
-import Local from "./components/Local";
+import VsPlayer from "./components/VsPlayer";
+import VsIA from "./components/VsIA";
 import Multi from "./components/Multi";
 
 export default class App extends React.Component {
@@ -15,8 +16,11 @@ const RootStack = StackNavigator({
   Menuscreen: {
     screen: Menu,
   },
-  Localscreen: {
-    screen: Local,
+  LocalscreenPlayer: {
+    screen: VsPlayer,
+  },
+  LocalscreenIA: {
+    screen: VsIA,
   },
   Multiscreen: {
     screen: Multi,
