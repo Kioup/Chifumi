@@ -10,6 +10,11 @@ export default class VsPlayer extends React.Component {
           justifyContent: 'space-between',
           height: '100%',
       }}>
+        <View style={{transform: [{ rotate: '180deg'}]}}>
+
+          <Deck highlight="1" />
+
+        </View>
         <View>
           <Text>Player VS Player</Text>
         </View>
