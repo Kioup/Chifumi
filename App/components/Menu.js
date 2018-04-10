@@ -4,9 +4,6 @@ import Deck from './Deck';
 import { Text, View, Button, Alert } from 'react-native';
 
 export default class Menu extends React.Component {
-  _localPlayerButtonPress = () => {
-    this.props.navigation.navigate('LocalscreenPlayer');
-  };
   _localIAButtonPress = () => {
     this.props.navigation.navigate('LocalscreenIA');
   };
@@ -34,11 +31,6 @@ export default class Menu extends React.Component {
             flexDirection: 'row',
             justifyContent: 'space-around',
         }}>
-          <Button
-            title="1 vs 1"
-            style={{ padding: 40 }}
-            onPress={this._localPlayerButtonPress}
-          />
           <Button
             title="1 vs IA"
             style={{ padding: 40 }}

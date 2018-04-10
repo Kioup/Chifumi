@@ -19,7 +19,6 @@ export default class VsIA extends React.Component {
             <View>
     
               <Deck highlight="1" />
-              <Text>{Deck._getCount()}</Text>
             </View>
           </View>
         
