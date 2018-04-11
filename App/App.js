@@ -12,7 +12,7 @@ export default class App extends React.Component {
     
     super();
     //Pseudo par defaut
-    global.LoginUser = 'Anonyme';
+    global.LoginUser = 'Player 1';
     
   }
   

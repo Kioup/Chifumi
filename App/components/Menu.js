@@ -10,10 +10,10 @@ export default class Menu extends React.Component {
   _localIAButtonPress = () => {
     this.props.navigation.navigate('LocalscreenIA');
   };
-  _cnButtonPress = () => {
+  //_cnButtonPress = () => {
     //Alert.alert('Coming Soon!');
-    this.props.navigation.navigate('CNscreen');
-  };
+  //  this.props.navigation.navigate('CNscreen');
+  //};
   _multiButtonPress = () => {
     Alert.alert('Coming Soon!');
     //this.props.navigation.navigate('Multiscreen');
@@ -50,11 +50,6 @@ export default class Menu extends React.Component {
           <Text style={style.texte}>
             Welcome {global.LoginUser} !!!
           </Text>
-          <TouchableOpacity onPress={this._cnButtonPress}>
-            <Text style={{ fontSize: 20, alignSelf: 'center', marginBottom: 20 }}>
-              Changer de pseudo ?
-             </Text>
-          </TouchableOpacity>
           
           <Text style={{ fontSize: 40, alignSelf: 'center' }}>Chi-Fu-Mi</Text>
         </View>

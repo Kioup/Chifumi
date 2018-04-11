@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, Image, Animated, Easing } from 'react-native';
 
 export default class VsIA extends React.Component {
 
@@ -111,15 +111,32 @@ export default class VsIA extends React.Component {
       
     }
     
+    //animation Component
     
-
+    componentWillMount(){
+      this.animatedValue = new Animated.Value(1)
+      this.animatedTest = new Animated.Value(120)
+    }
+    
+    componentDidMount() {
+      Animated.timing(this.animatedValue, {
+        toValue: 2,
+        duration: 500,
+      }).start()
+    }
 
   render() {
+    const AnimatedStyle = {flexGrow : this.animatedValue}
     let style = StyleSheet.create({
       touch: {
         width: 1,
         height: 120,
         flexGrow: 1,
+      },
+      touch2: {
+        width: 1,
+        height: 150,
+        flexGrow: 2,
       },
       image: {
         width: '100%',
@@ -149,7 +166,7 @@ export default class VsIA extends React.Component {
         </View>
         
         
-        <View style={{ flexDirection: 'row' }}>
+        <Animated.View style={{ flexDirection: 'row' }}>
           <TouchableOpacity
             style={style.touch}
             onPress={this._onPressButton.rock}>
@@ -169,7 +186,7 @@ export default class VsIA extends React.Component {
             <Image
               source={require('../assets/Scissors.jpg')} style={style.image} />
           </TouchableOpacity>
-        </View>
+        </Animated.View>
       </View>
     );
   }
